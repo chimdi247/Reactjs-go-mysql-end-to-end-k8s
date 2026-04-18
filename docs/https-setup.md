@@ -46,7 +46,7 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: vijaygiduthuri@gmail.com
+    email: shimdi247@gmail.com
     privateKeySecretRef:
       name: letsencrypt-prod-key
     solvers:
@@ -79,7 +79,8 @@ spec:
     name: letsencrypt-prod
     kind: ClusterIssuer
   dnsNames:
-    - vijaygiduthuri.in
+    - vhbj.site
+    - www.vhbj.site
 EOF
 ```
 
@@ -111,17 +112,17 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(\`vijaygiduthuri.in\`) && PathPrefix(\`/api\`)
+    - match: Host(\`vhbj.site\`) && PathPrefix(\`/api\`)
       kind: Rule
       services:
         - name: shopverse-backend-svc
           port: 8080
-    - match: Host(\`vijaygiduthuri.in\`) && PathPrefix(\`/health\`)
+    - match: Host(\`vhbj.site\`) && PathPrefix(\`/health\`)
       kind: Rule
       services:
         - name: shopverse-backend-svc
           port: 8080
-    - match: Host(\`vijaygiduthuri.in\`)
+    - match: Host(\`vhbj.site\`)
       kind: Rule
       services:
         - name: shopverse-frontend-svc
@@ -156,7 +157,7 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(\`vijaygiduthuri.in\`)
+    - match: Host(\`vhbj.site\`)
       kind: Rule
       middlewares:
         - name: redirect-https
