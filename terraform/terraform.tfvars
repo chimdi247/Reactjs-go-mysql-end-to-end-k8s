@@ -13,10 +13,10 @@ vpc_cidr = "10.0.0.0/16"
 # EKS
 # ──────────────────────────────────────────────
 cluster_name       = "shopverse-cluster"
-cluster_version    = "1.30"
+cluster_version    = "1.34"
 node_instance_type = "c7i-flex.large"
-node_desired_size  = 2
-node_min_size      = 1
+node_desired_size  = 3
+node_min_size      = 3
 node_max_size      = 4
 
 # ──────────────────────────────────────────────

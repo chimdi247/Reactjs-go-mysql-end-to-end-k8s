@@ -6,7 +6,7 @@ variable "cluster_name" {
 variable "cluster_version" {
   description = "Kubernetes version"
   type        = string
-  default     = "1.30"
+  default     = "1.34"
 }
 
 variable "vpc_id" {
@@ -33,13 +33,13 @@ variable "node_instance_type" {
 variable "node_desired_size" {
   description = "Desired number of worker nodes"
   type        = number
-  default     = 2
+  default     = 3
 }
 
 variable "node_min_size" {
   description = "Minimum number of worker nodes"
   type        = number
-  default     = 1
+  default     = 3
 }
 
 variable "node_max_size" {
