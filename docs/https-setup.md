@@ -79,8 +79,8 @@ spec:
     name: letsencrypt-prod
     kind: ClusterIssuer
   dnsNames:
-    - vhbj.site
-    - www.vhbj.site
+    - wsedf.online
+    - www.wsedf.online
 EOF
 ```
 
